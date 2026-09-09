@@ -1,0 +1,560 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f2f2f2;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 30px;
+}
+
+/* ==============================
+   ENCABEZADO
+   ============================== */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: 1100px;
+  margin: 0 auto 30px;
+
+  padding: 20px 25px;
+
+  background: #e3350d;
+  border-radius: 15px;
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  margin: 0;
+  color: white;
+  font-size: 32px;
+}
+
+.boton-favoritos {
+  padding: 12px 18px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: white;
+  color: #333;
+
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.boton-favoritos:hover {
+  background: #f5f5f5;
+}
+
+/* ==============================
+   CONTENIDO
+   ============================== */
+
+main {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* ==============================
+   BUSCADOR
+   ============================== */
+
+.buscador {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  margin-bottom: 35px;
+}
+
+.buscador input {
+  width: 350px;
+
+  padding: 14px;
+
+  border: 2px solid #ccc;
+  border-radius: 8px;
+
+  font-size: 16px;
+  outline: none;
+}
+
+.buscador input:focus {
+  border-color: #3b4cca;
+}
+
+.buscador button {
+  padding: 14px 25px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #3b4cca;
+  color: white;
+
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.buscador button:hover {
+  background: #293b9b;
+}
+
+/* ==============================
+   LISTA DE POKÉMON
+   ============================== */
+
+.lista {
+  margin-top: 40px;
+}
+
+.lista h2 {
+  text-align: center;
+  margin-bottom: 25px;
+
+  color: #333;
+}
+
+.grid-pokemon {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+.pokemon-mini {
+  background: white;
+
+  padding: 20px;
+
+  border-radius: 15px;
+
+  text-align: center;
+
+  box-shadow:
+    0 4px 12px
+    rgba(0, 0, 0, 0.12);
+
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.pokemon-mini:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 8px 20px
+    rgba(0, 0, 0, 0.18);
+}
+
+.pokemon-mini img {
+  width: 130px;
+  height: 130px;
+
+  image-rendering: pixelated;
+}
+
+.pokemon-mini h3 {
+  margin: 10px 0 5px;
+
+  color: #333;
+}
+
+.pokemon-mini p {
+  margin: 5px;
+
+  color: #777;
+}
+
+/* ==============================
+   BOTONES DE LAS TARJETAS
+   ============================== */
+
+.pokemon-mini button {
+  margin: 5px 2px;
+
+  padding: 9px 10px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #3b4cca;
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 12px;
+}
+
+.pokemon-mini button:hover {
+  background: #293b9b;
+}
+
+.pokemon-mini .mini-favorito {
+  background: #ffcc00;
+  color: #333;
+}
+
+.pokemon-mini .mini-favorito:hover {
+  background: #e6b800;
+}
+
+/* ==============================
+   DETALLES
+   ============================== */
+
+.pokemon-card {
+  width: 380px;
+
+  margin: 30px auto;
+
+  padding: 30px;
+
+  text-align: center;
+
+  background: white;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 5px 20px
+    rgba(0, 0, 0, 0.15);
+}
+
+.pokemon-card img {
+  width: 220px;
+  height: 220px;
+}
+
+.pokemon-card h2 {
+  margin: 10px 0;
+
+  color: #333;
+}
+
+.pokemon-card p {
+  font-size: 17px;
+
+  color: #555;
+}
+
+.habilidades {
+  margin: 20px 0;
+
+  padding: 15px;
+
+  background: #f5f5f5;
+
+  border-radius: 10px;
+}
+
+.habilidades h3 {
+  margin-top: 0;
+}
+
+.habilidades ul {
+  list-style: none;
+
+  padding: 0;
+}
+
+.habilidades li {
+  margin: 5px;
+}
+
+/* ==============================
+   FAVORITO
+   ============================== */
+
+.favorito {
+  padding: 12px 18px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #ffcc00;
+
+  cursor: pointer;
+
+  font-weight: bold;
+}
+
+.favorito:hover {
+  background: #e6b800;
+}
+
+/* ==============================
+   FAVORITOS
+   ============================== */
+
+.favoritos {
+  padding: 30px;
+
+  background: white;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 5px 20px
+    rgba(0, 0, 0, 0.1);
+}
+
+.favoritos h2 {
+  text-align: center;
+
+  color: #333;
+}
+
+.lista-favoritos {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+.favorito-card {
+  padding: 20px;
+
+  text-align: center;
+
+  background: #f8f8f8;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 3px 10px
+    rgba(0, 0, 0, 0.1);
+}
+
+.favorito-card img {
+  width: 140px;
+  height: 140px;
+
+  image-rendering: pixelated;
+}
+
+.favorito-card h3 {
+  color: #444;
+}
+
+.favorito-card button {
+  padding: 9px 15px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #dc3545;
+
+  color: white;
+
+  cursor: pointer;
+}
+
+.favorito-card button:hover {
+  background: #b02a37;
+}
+
+/* ==============================
+   PAGINACIÓN
+   ============================== */
+
+.paginacion {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 25px;
+
+  margin: 35px 0;
+}
+
+.paginacion button {
+  padding: 12px 20px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #3b4cca;
+
+  color: white;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.paginacion button:hover:not(:disabled) {
+  background: #293b9b;
+}
+
+.paginacion button:disabled {
+  background: #aaa;
+
+  cursor: not-allowed;
+}
+
+.paginacion span {
+  font-size: 18px;
+
+  font-weight: bold;
+
+  color: #333;
+}
+
+/* ==============================
+   MENSAJE DE ERROR
+   ============================== */
+
+.mensaje-error {
+  max-width: 500px;
+
+  margin: 30px auto;
+
+  padding: 25px;
+
+  text-align: center;
+
+  background: white;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 4px 15px
+    rgba(0, 0, 0, 0.12);
+}
+
+.mensaje-error h2 {
+  color: #dc3545;
+
+  margin-bottom: 10px;
+}
+
+.mensaje-error p {
+  color: #555;
+
+  margin-bottom: 10px;
+}
+
+.mensaje-error button {
+  margin-top: 10px;
+
+  padding: 10px 18px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #3b4cca;
+
+  color: white;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.mensaje-error button:hover {
+  background: #293b9b;
+}
+
+/* ==============================
+   MENSAJES
+   ============================== */
+
+.mensaje {
+  text-align: center;
+
+  font-size: 18px;
+
+  font-weight: bold;
+
+  color: #555;
+}
+
+/* ==============================
+   RESPONSIVE
+   ============================== */
+
+@media (max-width: 900px) {
+
+  .grid-pokemon {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+  .lista-favoritos {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .app {
+    padding: 15px;
+  }
+
+  header {
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  header h1 {
+    font-size: 25px;
+  }
+
+  .buscador {
+    flex-direction: column;
+  }
+
+  .buscador input {
+    width: 100%;
+  }
+
+  .grid-pokemon {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .lista-favoritos {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .pokemon-card {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 450px) {
+
+  .grid-pokemon {
+    grid-template-columns: 1fr;
+  }
+
+  .lista-favoritos {
+    grid-template-columns: 1fr;
+  }
+
+}
