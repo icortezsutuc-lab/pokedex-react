@@ -25,7 +25,7 @@ El proyecto utiliza PokeAPI para obtener la información de los Pokémon.
 
 API:
 
-https://pokeapi.co/api/v2/
+https://github.com/icortezsutuc-lab/pokedex-react.git
 
 ## ⚙️ Funcionalidades
 
