@@ -1,13 +1,55 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <meta
+      name="description"
+      content="Consulta información de Pokémon, descubre sus características y guarda tus Pokémon favoritos en nuestra Pokédex."
+    />
+
+    <meta name="author" content="Pokédex" />
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pokedex</title>
+
+    <title>Pokédex - Consulta información de Pokémon</title>
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Pokédex - Consulta información de Pokémon"
+    />
+
+    <meta
+      property="og:description"
+      content="Consulta información de Pokémon, descubre sus características y guarda tus Pokémon favoritos."
+    />
+
+    <meta property="og:type" content="website" />
+
+    <!-- Datos estructurados JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Pokédex",
+        "description": "Consulta información de Pokémon, descubre sus características y guarda tus Pokémon favoritos.",
+        "url": "http://localhost:5173/"
+      }
+    </script>
+
+    <!-- URL canónica -->
+    <link rel="canonical" href="http://localhost:5173/" />
   </head>
+
   <body>
     <div id="root"></div>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
